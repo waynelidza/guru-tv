@@ -4,7 +4,13 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<ion-header>
 
+  <ion-navbar>
+    <ion-title> GURU </ion-title>
+  </ion-navbar>
+
+</ion-header>
 
 <ion-content padding
              id="body">
@@ -13,13 +19,10 @@
   <br>
   <form #loginForm="ngForm" (ngSubmit)="Login()" id="form" >
 
-    <ion-item>
-      <ion-label>Username</ion-label>
-      <ion-input id="username" type="text"[(ngModel)]="login.username" name="username"></ion-input>
-    </ion-item>
+
 
     <div padding>
-      <button id="btnlogin" ion-button full>LOG IN</button>
+      <button id="btnlogin" ion-button full>Subscribe</button>
     </div>
   </form>
 
