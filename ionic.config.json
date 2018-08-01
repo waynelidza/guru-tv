@@ -1,0 +1,7 @@
+{
+  "name": "ivyveg",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

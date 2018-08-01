@@ -1,0 +1,24 @@
+page-login {
+  #body {
+    background-image: url(../assets/imgs/waller.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+
+    width:100%;
+  }
+  container{
+    z-index: -999;
+  }
+
+
+
+
+  #form{
+    margin-top: 150px;
+
+  }
+
+  #btnlogin{
+    background-color: #FFFF00;
+  }
+}
