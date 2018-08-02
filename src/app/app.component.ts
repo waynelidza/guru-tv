@@ -16,7 +16,7 @@ import {ShopPage} from "../pages/shop/shop";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = MenuPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -52,7 +52,7 @@ checkLogin(){
   this. storage.get('userID').then((val) => {
     console.log(val)
     if(val ===null){
-      this.nav.push('LoginPage');
+      this.nav.push('MenuPage');
     }else{
       this.nav.push('MenuPage');
 
