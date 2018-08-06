@@ -19,11 +19,13 @@ import {IonicStorageModule} from "@ionic/storage";
 import {MenuPageModule} from "../pages/menu/menu.module";
 import {ProfilePageModule} from "../pages/profile/profile.module";
 import {SuggestionPageModule} from "../pages/suggestion/suggestion.module";
+import {StreamingMedia, StreamingVideoOptions} from "@ionic-native/streaming-media";
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,8 @@ import {SuggestionPageModule} from "../pages/suggestion/suggestion.module";
     StatusBar,
     FCM,
     SplashScreen,
+    StreamingMedia,
+
 
     Geolocation,
     Storage,

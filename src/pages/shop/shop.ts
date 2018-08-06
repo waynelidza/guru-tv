@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {SystemServiceProvider} from "../../providers/system-service/system-service";
 import {Storage} from "@ionic/storage";
+import {StreamingMedia, StreamingVideoOptions} from "@ionic-native/streaming-media";
 
 /**
  * Generated class for the ShopPage page.
@@ -24,18 +25,34 @@ export class ShopPage {
   alertmessage = '';
   toastmeassage="";
   buynow = {Totalprice: '0', CustomerName:'wayne',cellphonenumbers:'',details:"",status:"0",DatetimeOrder:""};
-  constructor(public navCtrl: NavController, public navParams: NavParams,public service:SystemServiceProvider,public alertCtrl: AlertController,public loadingCtrl: LoadingController,private toastCtrl: ToastController,public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public service:SystemServiceProvider,public alertCtrl: AlertController,public loadingCtrl: LoadingController,private toastCtrl: ToastController,public storage: Storage ,private streamingMedia: StreamingMedia) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShopPage');
-    this.getall();
+
 
 
   }
   ionViewDidEnter(){
-    this.getall();
+    this.playVideo();
   }
+
+  playVideo(){
+    let options: StreamingVideoOptions = {
+      successCallback: () => { console.log('Video played') },
+      errorCallback: (e) => { console.log('Error streaming') },
+      orientation: 'landscape',
+      shouldAutoClose: true,
+      controls: false
+    };
+    this.streamingMedia.playVideo('https://www.youtube.com/watch?v=ClvLsY-tTC4', options);
+  }
+
+
+
+
+
   getall() {
     let loader = this.loadingCtrl.create({
       content: 'loading.....',
