@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>813507640699-t7ifmevmvq71acjjlbcl7gcr9cad2719.apps.googleusercontent.com</string>
+	<string>389904132584-jqnf4t2mrbs6capmgupklb44tgbsk0bg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.813507640699-t7ifmevmvq71acjjlbcl7gcr9cad2719</string>
+	<string>com.googleusercontent.apps.389904132584-jqnf4t2mrbs6capmgupklb44tgbsk0bg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA2waQ_ygGy5MkI2FB-nd9jUKyuWaQiFCc</string>
+	<string>AIzaSyDSOcS6EutqDXEs2EC6s2bHV2DqmyjytTE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>813507640699</string>
+	<string>389904132584</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>guru.tv</string>
 	<key>PROJECT_ID</key>
-	<string>ivyveg-386ae</string>
+	<string>guru-907a1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ivyveg-386ae.appspot.com</string>
+	<string>guru-907a1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:813507640699:ios:c915b9cb1db6b376</string>
+	<string>1:389904132584:ios:c915b9cb1db6b376</string>
 	<key>DATABASE_URL</key>
-	<string>https://ivyveg-386ae.firebaseio.com</string>
+	<string>https://guru-907a1.firebaseio.com</string>
 </dict>
 </plist>
