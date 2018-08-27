@@ -83,7 +83,7 @@ registerGCM(){
               this.showAlert();
               this.notifyAdmin();
 
-              // this.navCtrl.push(HomePage);
+               this.navCtrl.push(MenuPage);
 
 
             },
