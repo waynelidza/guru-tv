@@ -15,7 +15,7 @@ export class SystemServiceProvider {
   }
 
   register(name:string,gcm:string) {
-    return this.http.post<any>('http://localhost:3000/register', { name:name,GCMID:gcm})
+    return this.http.post<any>('http://172.33.23.28:3000/register', { name:name,GCMID:gcm})
       .map(user => {
         // login successful if there's a jwt token in the response
         console.log(user.status);
