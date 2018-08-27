@@ -14,8 +14,8 @@ export class SystemServiceProvider {
     console.log('Hello SystemServiceProvider Provider');
   }
 
-  register(cellphonenumber: string, password: string,name:string,surname:string,address:string,accountStatus:string,gcm:string) {
-    return this.http.post<any>('http://ec2-34-240-133-21.eu-west-1.compute.amazonaws.com:3000/register', { cellphonenumber: cellphonenumber, password: password ,name:name,surname:surname,address:address,accountStatus:accountStatus,GCMID:gcm})
+  register(name:string,gcm:string) {
+    return this.http.post<any>('http://localhost:3000/register', { name:name,GCMID:gcm})
       .map(user => {
         // login successful if there's a jwt token in the response
         console.log(user.status);

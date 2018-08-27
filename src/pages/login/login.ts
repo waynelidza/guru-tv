@@ -69,38 +69,14 @@ registerGCM(){
 }
 
   letsRegister(){
-    this.varcounterrorLogin =0;
-    if(this.User.cellphonenumber===''){
-      this.varcounterrorLogin++;
 
-    }
-    if(this.User.password===''){
-      this.varcounterrorLogin++;
-
-    }
-    if(this.User.surname===''){
-      this.varcounterrorLogin++;
-
-    }
-    if(this.User.address===''){
-      this.varcounterrorLogin++;
-
-    }
-    if(this.User.name===''){
-      this.varcounterrorLogin++;
-
-    }
-    if(this.varcounterrorLogin>0){
-      this.alertmessage ="all fields must not be blank";
-      this.showAlert();
-    }
-    else {
 
       let loader = this.loadingCtrl.create({
         content: 'loading.....',
       });
       loader.present().then(() => {
-        this.Service.register(this.User.cellphonenumber,this.User.password, this.User.name, this.User.surname,  this.User.address, this.User.accountStatus = '0', this.userGcmID)
+        this.User.name ='guru';
+        this.Service.register( this.User.name,  this.userGcmID)
           .subscribe(
             data => {
               this.alertmessage = data.message;
@@ -124,7 +100,6 @@ registerGCM(){
         loader.dismiss();
       });
 
-    }
   }
   setMessage(statuscode:string){
     alert(statuscode);
@@ -172,93 +147,93 @@ notifyAdmin(){
         });
   }
 
-  lestLogins() {
-    this.varcounterrorLogin = 0;
-    if (this.login.cellphonenumber === '') {
-      this.varcounterrorLogin++;
-
-    }
-    if (this.login.password === '') {
-      this.varcounterrorLogin++;
-
-    }
-    if (this.varcounterrorLogin>0) {
-      this.alertmessage = " enter cellphonenumber and password";
-      this.showAlert();
-    }
-    else {
-      let loader = this.loadingCtrl.create({
-        content: 'please wait...',
-      });
-
-      loader.present().then(() => {
-        this.Service.login(this.login.cellphonenumber, this.login.password)
-          .subscribe(
-            data => {
-              if(data.accountStatus==='0'){
-                this.alertmessage = " please wait for your account to be approved";
-                this.showAlert();
-                this.navCtrl.push(MyApp);
-
-              }
-              else {
-                this.storage.clear();
-                this.navCtrl.push(MenuPage);
-
-
-              this.setTestParam(data.name);
-                this.storage.set('userID', data._id);
-                this.storage.set('cellphonenumber', data.cellphonenumber);
-                this.storage.set('username', data.name);
-
-
-              }
-            },
-            error => {
-              if (error.status === 401) {
-
-                this.alertmessage = " wrong cellphonenumber or password";
-                this.showAlert();
-              }
-              if (error.status === 0) {
-                this.alertmessage = "not internet connection or server is down";
-                this.showAlert();
-              }
-            });
-        loader.dismiss();
-      });
-
-
-    }
-  }
-loading() {
-  let loader = this.loadingCtrl.create({
-    content: 'Getting latest entries...',
-  });
-
-  loader.present().then(() => {
-    this.Service.register(this.User.cellphonenumber,this.User.password, this.User.name, this.User.surname,  this.User.address, this.User.accountStatus = '0', this.userGcmID)
-      .subscribe(
-        data => {
-          this.alertmessage = data.message;
-          this.showAlert();
-          this.notifyAdmin();
-
-          // this.navCtrl.push(HomePage);
-
-
-        },
-        error => {
-          if (error.status === 409) {
-            this.alertmessage = "Phonenumber you have entered exist";
-            this.showAlert();
-          }
-
-        });
-    loader.dismiss();
-  });
-
-}
+//   lestLogins() {
+//     this.varcounterrorLogin = 0;
+//     if (this.login.cellphonenumber === '') {
+//       this.varcounterrorLogin++;
+//
+//     }
+//     if (this.login.password === '') {
+//       this.varcounterrorLogin++;
+//
+//     }
+//     if (this.varcounterrorLogin>0) {
+//       this.alertmessage = " enter cellphonenumber and password";
+//       this.showAlert();
+//     }
+//     else {
+//       let loader = this.loadingCtrl.create({
+//         content: 'please wait...',
+//       });
+//
+//       loader.present().then(() => {
+//         this.Service.login(this.login.cellphonenumber, this.login.password)
+//           .subscribe(
+//             data => {
+//               if(data.accountStatus==='0'){
+//                 this.alertmessage = " please wait for your account to be approved";
+//                 this.showAlert();
+//                 this.navCtrl.push(MyApp);
+//
+//               }
+//               else {
+//                 this.storage.clear();
+//                 this.navCtrl.push(MenuPage);
+//
+//
+//               this.setTestParam(data.name);
+//                 this.storage.set('userID', data._id);
+//                 this.storage.set('cellphonenumber', data.cellphonenumber);
+//                 this.storage.set('username', data.name);
+//
+//
+//               }
+//             },
+//             error => {
+//               if (error.status === 401) {
+//
+//                 this.alertmessage = " wrong cellphonenumber or password";
+//                 this.showAlert();
+//               }
+//               if (error.status === 0) {
+//                 this.alertmessage = "not internet connection or server is down";
+//                 this.showAlert();
+//               }
+//             });
+//         loader.dismiss();
+//       });
+//
+//
+//     }
+//   }
+// loading() {
+//   let loader = this.loadingCtrl.create({
+//     content: 'Getting latest entries...',
+//   });
+//
+//   loader.present().then(() => {
+//     this.Service.register(this.User.cellphonenumber,this.User.password, this.User.name, this.User.surname,  this.User.address, this.User.accountStatus = '0', this.userGcmID)
+//       .subscribe(
+//         data => {
+//           this.alertmessage = data.message;
+//           this.showAlert();
+//           this.notifyAdmin();
+//
+//           // this.navCtrl.push(HomePage);
+//
+//
+//         },
+//         error => {
+//           if (error.status === 409) {
+//             this.alertmessage = "Phonenumber you have entered exist";
+//             this.showAlert();
+//           }
+//
+//         });
+//     loader.dismiss();
+//   });
+//
+// }
 
 
   setTestParam(testparam)
