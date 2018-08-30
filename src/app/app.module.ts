@@ -20,6 +20,8 @@ import {MenuPageModule} from "../pages/menu/menu.module";
 import {ProfilePageModule} from "../pages/profile/profile.module";
 import {SuggestionPageModule} from "../pages/suggestion/suggestion.module";
 import {StreamingMedia, StreamingVideoOptions} from "@ionic-native/streaming-media";
+import {VgControlsModule} from "videogular2/controls";
+import {VgCoreModule} from "videogular2/core";
 @NgModule({
   declarations: [
     MyApp,
@@ -32,6 +34,8 @@ import {StreamingMedia, StreamingVideoOptions} from "@ionic-native/streaming-med
     OrdersPageModule,
     ShopPageModule,
     NewsPageModule,
+    VgCoreModule,
+    VgControlsModule,
     MenuPageModule,
     SuggestionPageModule,
     ProfilePageModule,

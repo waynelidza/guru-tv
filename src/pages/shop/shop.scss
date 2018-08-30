@@ -2,7 +2,7 @@ page-shop {
   #body {
     //background-image: url("../../assets/imgs/wall.jpg");
     //background-image: url("…/assets/imgs/wall.jpg");
-    background-image: url(../assets/imgs/wall2.jpg);
+    background-image: url(../assets/imgs/waller.jpg);
     background-size: cover;
     background-repeat:no-repeat;
 
@@ -31,5 +31,14 @@ page-shop {
       width: 100%;
       color: #fff;
     }
+
   }
+#icon{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
+}
+
