@@ -15,7 +15,7 @@ export class SystemServiceProvider {
   }
 
   register(name:string,gcm:string) {
-    return this.http.post<any>('http://22.247.14.112:3000/register', { name:name,GCMID:gcm})
+    return this.http.post<any>('http://172.33.23.28:3000/register', { name:name,GCMID:gcm})
       .map(user => {
         // login successful if there's a jwt token in the response
         console.log(user.status);
@@ -105,8 +105,8 @@ export class SystemServiceProvider {
         return user;
       });
   }
-  getNews() {
-    return this.http.get<any>('http://ec2-34-240-133-21.eu-west-1.compute.amazonaws.com:3000/adminNews')
+  getVideos() {
+    return this.http.get<any>('http://172.33.23.28:3000/videos')
       .map(user => {
         // login successful if there's a jwt token in the response
 

@@ -30,11 +30,13 @@ export class ShopPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShopPage');
-
+  this.getall();
 
 
   }
   ionViewDidEnter(){
+
+    this.getall();
     this.playVideo();
   }
 
@@ -46,7 +48,7 @@ export class ShopPage {
       shouldAutoClose: true,
       controls: false
     };
-    this.streamingMedia.playVideo('https://www.youtube.com/watch?v=ClvLsY-tTC4', options);
+    this.streamingMedia.playVideo('http://localhost/guru/shati.mp4', options);
   }
 
 
@@ -58,12 +60,12 @@ export class ShopPage {
       content: 'loading.....',
     });
     loader.present().then(() => {
-    this.service.getProducts()
+    this.service.getVideos()
       .subscribe(
         data => {
           this.products = data
 
-
+        console.log(data);
 
 
 
