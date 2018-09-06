@@ -12,15 +12,15 @@
 
 <ion-content class="card-background-page" padding id="body">
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <ion-card >
-    <img src="../assets/imgs/test.jpg"/>
-    <div class="card-title">São Paulo</div>
+  <ion-card *ngFor="let product of products" >
+
+    <img src="https://images.unsplash.com/photo-1506606401543-2e73709cebb4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c503710f47a3f687d8711b6202861028&auto=format&fit=crop&w=2550&q=80">
+    <div class="card-title">{{product.tittle}}</div>
     <div class="card-subtitle">
       <button ion-button icon-start clear small>
         <ion-icon  id ="icons"name="play"></ion-icon>
         <div>Play</div>
       </button>
-
     </div>
   </ion-card>
 

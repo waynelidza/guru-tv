@@ -37,7 +37,7 @@ export class ShopPage {
   ionViewDidEnter(){
 
     this.getall();
-    this.playVideo();
+
   }
 
   playVideo(){
@@ -48,7 +48,7 @@ export class ShopPage {
       shouldAutoClose: true,
       controls: false
     };
-    this.streamingMedia.playVideo('http://localhost/guru/shati.mp4', options);
+    this.streamingMedia.playVideo('https://s3.amazonaws.com/guru.tv/shatrisha/Shatrisaha+na+First+Lady++Zimbabwe.mp4', options);
   }
 
 

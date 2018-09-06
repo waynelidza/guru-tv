@@ -22,10 +22,10 @@ export class NewsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewsPage');
-    this.getNews();
+
   }
   ionViewDidEnter(){
-    this.getNews();
+
   }
 
  getNews(){
@@ -35,7 +35,7 @@ export class NewsPage {
    });
 
    loader.present().then(() => {
-     this.service.getNews()
+     this.service.getVideos()
        .subscribe(
          data => {
 
